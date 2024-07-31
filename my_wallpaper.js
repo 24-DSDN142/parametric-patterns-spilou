@@ -1,7 +1,8 @@
 //your parameter variables go here!
-let size = 90;
-
-let something = true
+let face = 150;
+let nose = 100;
+let ear = 50;
+let innerear = 25;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -15,21 +16,39 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(110, 146, 212);
+  background(255, 215, 181);
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 
-rect(size, size, size, size);
+//ears
+fill(166, 81, 7);
+ellipse(35, 50, ear, ear);
+ellipse(165, 50, ear, ear);
 
-if(size > 50){
-fill(115, 54, 54);
-}
-else{
-fill(183, 79, 209);
-}
+fill(176, 176, 176);
+ellipse(35, 50, innerear, innerear);
+ellipse(165, 50, innerear, innerear);
 
-ellipse(100, 100, size/2, size);
+//face
+fill(166, 81, 7);
+ellipse(100, 100, face, face);
+
+fill(176, 176, 176);
+arc(100, 85, 80, 110, 180, 360, CHORD);
+
+fill(0, 0, 0);
+ellipse(75, 70, 10, 20);
+ellipse(125, 70, 10, 20);
+
+//nose
+fill(176, 176, 176);
+ellipse(100, 120, nose, nose);
+
+fill(0, 0, 0);
+arc(100, 100, 90, 60, 180, 360, CHORD);
+
+line(100, 100, 100, 125);
 
 }
 
@@ -48,3 +67,20 @@ ellipse(100, 100, size/2, size);
 // strokeWeight(1);
 // stroke(191, 191, 191);
 // rect(12, 112, 121, 76);
+
+// if(nose > 50){
+//   fill(199, 199, 199);
+//   }
+//   else{
+//   fill(28, 28, 28);
+//   }
+
+
+//eyes
+// fill(232, 232, 232);
+// arc(75, 90, 20, 80, 180, 360, CHORD);
+// arc(125, 90, 20, 80, 180, 360, CHORD);
+
+
+// arc(75, 90, 15, 70, 180, 360, CHORD);
+// arc(125, 90, 15, 70, 180, 360, CHORD);
